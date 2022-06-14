@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/principalFragment2">
+
+    <fragment
+        android:id="@+id/principalFragment2"
+        android:name="es.carlossc212.anuncios.view.activityfragments.PrincipalFragment"
+        android:label="Anuncios"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/to_add"
+            app:destination="@id/addAnuncioFragment" />
+        <action
+            android:id="@+id/see_details"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAnuncioFragment"
+        android:name="es.carlossc212.anuncios.view.activityfragments.AddAnuncioFragment"
+        android:label="Añadir"
+        tools:layout="@layout/fragment_add_anuncio" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="es.carlossc212.anuncios.view.activityfragments.DetailFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
